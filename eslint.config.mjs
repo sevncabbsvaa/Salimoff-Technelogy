@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Vendored Claude Design export bundle — not app source.
+    "design-source/**",
   ]),
 ]);
 

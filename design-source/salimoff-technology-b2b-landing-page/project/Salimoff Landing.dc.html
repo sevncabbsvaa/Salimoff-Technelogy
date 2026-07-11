@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #0A1628; color: #E2E8F0; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #94A3B8; text-decoration: none; }
+    a:hover { color: #E2E8F0; }
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .faq-chev { transform: rotate(45deg); }
+    @keyframes pulseGlow { 0%,100% { opacity: 0.5; } 50% { opacity: 0.9; } }
+  </style>
+</helmet>
+
+<div style="background: #0A1628; min-height: 100vh; overflow-x: hidden;">
+
+  <!-- ============ NAV ============ -->
+  <nav data-screen-label="Nav" style="position: sticky; top: 0; z-index: 50; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background: rgba(10,22,40,0.78); border-bottom: 1px solid rgba(96,165,250,0.10);">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+      <a href="#hero" style="display: flex; align-items: center; gap: 10px; color: #E2E8F0;">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <rect x="7" y="7" width="16" height="16" rx="3" stroke="#60A5FA" stroke-width="1.6"></rect>
+          <circle cx="15" cy="15" r="3" fill="#3B82F6"></circle>
+          <line x1="15" y1="0" x2="15" y2="7" stroke="#3B82F6" stroke-width="1.6"></line>
+          <line x1="15" y1="23" x2="15" y2="30" stroke="#3B82F6" stroke-width="1.6"></line>
+          <line x1="0" y1="15" x2="7" y2="15" stroke="#3B82F6" stroke-width="1.6"></line>
+          <line x1="23" y1="15" x2="30" y2="15" stroke="#3B82F6" stroke-width="1.6"></line>
+        </svg>
+        <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 0.02em;">SALIMOFF<span style="color: #60A5FA;">&nbsp;TECH</span></span>
+      </a>
+      <div style="display: flex; align-items: center; gap: 28px; font-size: 14px; font-weight: 500; flex-wrap: wrap; justify-content: center;">
+        <a href="#haqqimizda" style-hover="color: #E2E8F0;">Haqqımızda</a>
+        <a href="#mehsullar" style-hover="color: #E2E8F0;">Məhsullar</a>
+        <a href="#niye-biz" style-hover="color: #E2E8F0;">Niyə Biz</a>
+        <a href="#komanda" style-hover="color: #E2E8F0;">Komanda</a>
+        <a href="#faq" style-hover="color: #E2E8F0;">FAQ</a>
+      </div>
+      <a href="#elaqe" style="background: linear-gradient(135deg, #3B82F6, #60A5FA); color: #FFFFFF; font-weight: 600; font-size: 14px; padding: 10px 20px; border-radius: 8px; white-space: nowrap; box-shadow: 0 2px 14px rgba(59,130,246,0.35);" style-hover="box-shadow: 0 4px 22px rgba(59,130,246,0.55); color: #FFFFFF;">Əlaqə saxla</a>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header id="hero" data-screen-label="Hero" style="position: relative; padding: 120px 24px 140px; text-align: center; overflow: hidden;">
+    <sc-if value="{{ showCircuit }}" hint-placeholder-val="{{ true }}">
+      <svg style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.35; pointer-events: none;" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" fill="none">
+        <path d="M0 120 H320 V260 H560" stroke="rgba(96,165,250,0.22)" stroke-width="1"></path>
+        <path d="M1200 90 H900 V210 H720" stroke="rgba(96,165,250,0.18)" stroke-width="1"></path>
+        <path d="M120 700 V480 H340" stroke="rgba(96,165,250,0.16)" stroke-width="1"></path>
+        <path d="M1080 700 V520 H880 V430" stroke="rgba(96,165,250,0.18)" stroke-width="1"></path>
+        <path d="M0 380 H180 V300" stroke="rgba(96,165,250,0.14)" stroke-width="1"></path>
+        <circle cx="320" cy="120" r="3.5" fill="#3B82F6"></circle>
+        <circle cx="560" cy="260" r="3.5" fill="#60A5FA"></circle>
+        <circle cx="900" cy="90" r="3.5" fill="#3B82F6"></circle>
+        <circle cx="720" cy="210" r="3.5" fill="#60A5FA"></circle>
+        <circle cx="340" cy="480" r="3.5" fill="#3B82F6"></circle>
+        <circle cx="880" cy="430" r="3.5" fill="#60A5FA"></circle>
+        <circle cx="180" cy="300" r="3" fill="#3B82F6"></circle>
+      </svg>
+      <div style="position: absolute; top: -180px; left: 50%; transform: translateX(-50%); width: 720px; height: 480px; background: radial-gradient(ellipse at center, rgba(59,130,246,0.22), transparent 65%); pointer-events: none; animation: pulseGlow 7s ease-in-out infinite;"></div>
+    </sc-if>
+    <div style="position: relative; max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 28px;">
+      <div style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(96,165,250,0.25); background: rgba(59,130,246,0.08); border-radius: 999px; padding: 7px 16px; font-size: 13px; color: #94A3B8; font-weight: 500;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: #60A5FA; display: inline-block;"></span>
+        Azərbaycanda hazırlanmış süni intellekt həlləri
+      </div>
+      <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(38px, 6vw, 68px); font-weight: 700; line-height: 1.08; margin: 0; letter-spacing: -0.02em;">
+        Gələcəyin biznesi<br>
+        <span style="background: linear-gradient(135deg, #3B82F6, #60A5FA); -webkit-background-clip: text; background-clip: text; color: transparent;">süni intellektlə</span> başlayır
+      </h1>
+      <p style="font-size: clamp(16px, 2vw, 19px); line-height: 1.65; color: #94A3B8; max-width: 640px; margin: 0;">Restoranlar, otellər və yaşayış kompleksləri üçün süni intellekt əsaslı avtomatlaşdırma həlləri. Xidmət keyfiyyətini yüksəldin, gəlirlərinizi artırın.</p>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-top: 8px;">
+        <a href="#elaqe" style="background: linear-gradient(135deg, #3B82F6, #60A5FA); color: #FFFFFF; font-weight: 600; font-size: 16px; padding: 15px 32px; border-radius: 10px; box-shadow: 0 4px 24px rgba(59,130,246,0.4);" style-hover="box-shadow: 0 6px 32px rgba(59,130,246,0.6); color: #FFFFFF;">Əlaqə saxla</a>
+        <a href="#mehsullar" style="border: 1px solid rgba(148,163,184,0.3); color: #E2E8F0; font-weight: 600; font-size: 16px; padding: 15px 32px; border-radius: 10px; background: rgba(17,29,51,0.5);" style-hover="border-color: rgba(96,165,250,0.6); color: #E2E8F0;">Məhsullara bax</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HAQQIMIZDA ============ -->
+  <section id="haqqimizda" data-screen-label="Haqqımızda" style="padding: 90px 24px; border-top: 1px solid rgba(96,165,250,0.08);">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px; align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 18px;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #60A5FA;">Haqqımızda</span>
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin: 0; line-height: 1.15;">Etibarlı texnologiya tərəfdaşınız</h2>
+        <p style="font-size: 16px; line-height: 1.7; color: #94A3B8; margin: 0;">Salimoff Technology MMC — restoranlar, otellər və yaşayış kompleksləri üçün süni intellekt əsaslı proqram təminatları hazırlayan Azərbaycan şirkətidir. Məqsədimiz xidmət sektorunda gündəlik əməliyyatları avtomatlaşdıraraq bizneslərin keyfiyyətini və gəlirliliyini artırmaqdır.</p>
+      </div>
+      <div style="display: grid; gap: 18px;">
+        <div style="background: #111D33; border: 1px solid rgba(96,165,250,0.12); border-radius: 14px; padding: 26px 28px; transition: all 0.25s ease;" style-hover="border-color: rgba(96,165,250,0.4); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(59,130,246,0.12);">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; margin: 0 0 8px; color: #60A5FA;">Missiyamız</h3>
+          <p style="font-size: 15px; line-height: 1.6; color: #94A3B8; margin: 0;">Biznesləri süni intellekt ilə rəqəmsallaşdırmaq.</p>
+        </div>
+        <div style="background: #111D33; border: 1px solid rgba(96,165,250,0.12); border-radius: 14px; padding: 26px 28px; transition: all 0.25s ease;" style-hover="border-color: rgba(96,165,250,0.4); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(59,130,246,0.12);">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; margin: 0 0 8px; color: #60A5FA;">Vizyonumuz</h3>
+          <p style="font-size: 15px; line-height: 1.6; color: #94A3B8; margin: 0;">Azərbaycanın və regionun aparıcı AI şirkətlərindən birinə çevrilmək.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MƏHSULLAR ============ -->
+  <section id="mehsullar" data-screen-label="Məhsullar" style="padding: 90px 24px; border-top: 1px solid rgba(96,165,250,0.08);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; max-width: 640px; margin: 0 auto 56px; display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #60A5FA;">Məhsullar</span>
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin: 0; line-height: 1.15;">Hər sektor üçün hazır AI həlləri</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px;">
+
+        <div style="background: #111D33; border: 1px solid rgba(96,165,250,0.12); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px; transition: all 0.25s ease;" style-hover="border-color: rgba(96,165,250,0.45); transform: translateY(-4px); box-shadow: 0 14px 38px rgba(59,130,246,0.15);">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59,130,246,0.12); border: 1px solid rgba(96,165,250,0.25); display: flex; align-items: center; justify-content: center;">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="#60A5FA" stroke-width="1.6"></circle><circle cx="11" cy="11" r="3" fill="#3B82F6"></circle></svg>
+          </div>
+          <div>
+            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; margin: 0 0 4px;">AI Ofisant</h3>
+            <p style="font-size: 13px; font-weight: 600; color: #60A5FA; margin: 0;">Restoranların yeni əməkdaşı</p>
+          </div>
+          <p style="font-size: 15px; line-height: 1.65; color: #94A3B8; margin: 0;">Səsli rəqəmsal ofisant müştərilərin sifarişlərini qəbul edir, menyu üzrə tövsiyələr verir və satışları artırır. Heç vaxt yorulmur, heç vaxt unudmaz.</p>
+          <ul style="list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px; color: #E2E8F0;">
+            <li style="display: flex; align-items: center; gap: 10px;"><span style="color: #60A5FA; font-weight: 700;">✓</span> QR menyu və tablet sifariş</li>
+            <li style="display: flex; align-items: center; gap: 10px;"><span style="color: #60A5FA; font-weight: 700;">✓</span> Ağıllı upsell tövsiyələri</li>
+            <li style="display: flex; align-items: center; gap: 10px;"><span style="color: #60A5FA; font-weight: 700;">✓</span> POS inteqrasiyası, 24/7 iş rejimi</li>
+          </ul>
+        </div>
+
+        <div style="background: #111D33; border: 1px solid rgba(96,165,250,0.12); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px; transition: all 0.25s ease;" style-hover="border-color: rgba(96,165,250,0.45); transform: translateY(-4px); box-shadow: 0 14px 38px rgba(59,130,246,0.15);">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59,130,246,0.12); border: 1px solid rgba(96,165,250,0.25); display: flex; align-items: center; justify-content: center;">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="3" width="16" height="16" rx="3" stroke="#60A5FA" stroke-width="1.6"></rect><rect x="8" y="8" width="6" height="6" rx="1.5" fill="#3B82F6"></rect></svg>
+          </div>
+          <div>
+            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; margin: 0 0 4px;">AI Room Service</h3>
+            <p style="font-size: 13px; font-weight: 600; color: #60A5FA; margin: 0;">Otellər üçün AI köməkçisi</p>
+          </div>
+          <p style="font-size: 15px; line-height: 1.65; color: #94A3B8; margin: 0;">Qonaqlar otaqdan çıxmadan bütün otel xidmətlərinə çatır. Sorğular avtomatik düzgün şöbəyə yönləndirilir, cavab müddəti dəqiqələrə enir.</p>
+          <ul style="list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px; color: #E2E8F0;">
+            <li style="display: flex; align-items: center; gap: 10px;"><span style="color: #60A5FA; font-weight: 700;">✓</span> Room service və housekeeping</li>
+            <li style="display: flex; align-items: center; gap: 10px;"><span style="color: #60A5FA; font-weight: 700;">✓</span> Laundry, transfer və SPA sifarişi</li>
+            <li style="display: flex; align-items: center; gap: 10px;"><span style="color: #60A5FA; font-weight: 700;">✓</span> Reception ilə birbaşa əlaqə</li>
+          </ul>
+        </div>
+
+        <div style="background: #111D33; border: 1px solid rgba(96,165,250,0.12); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px; transition: all 0.25s ease;" style-hover="border-color: rgba(96,165,250,0.45); transform: translateY(-4px); box-shadow: 0 14px 38px rgba(59,130,246,0.15);">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59,130,246,0.12); border: 1px solid rgba(96,165,250,0.25); display: flex; align-items: center; justify-content: center;">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="4" y="10" width="6" height="9" rx="1" stroke="#60A5FA" stroke-width="1.6"></rect><rect x="12" y="4" width="6" height="15" rx="1" stroke="#60A5FA" stroke-width="1.6"></rect><circle cx="15" cy="8" r="1.4" fill="#3B82F6"></circle></svg>
+          </div>
+          <div>
+            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; margin: 0 0 4px;">AI Smart Residence</h3>
+            <p style="font-size: 13px; font-weight: 600; color: #60A5FA; margin: 0;">Yaşadığınız bina sizin üçün işləyir</p>
+          </div>
+          <p style="font-size: 15px; line-height: 1.65; color: #94A3B8; margin: 0;">Yaşayış kompleksləri üçün vahid rəqəmsal platforma: sakinlərin gündəlik ehtiyacları bir tətbiqdə, idarəetmə üçün tam şəffaflıq.</p>
+          <ul style="list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px; color: #E2E8F0;">
+            <li style="display: flex; align-items: center; gap: 10px;"><span style="color: #60A5FA; font-weight: 700;">✓</span> Kommunal ödənişlər və bildirişlər</li>
+            <li style="display: flex; align-items: center; gap: 10px;"><span style="color: #60A5FA; font-weight: 700;">✓</span> Market və aptek sifarişi, rezervasiyalar</li>
+            <li style="display: flex; align-items: center; gap: 10px;"><span style="color: #60A5FA; font-weight: 700;">✓</span> AI Köməkçi və smart home idarəetməsi</li>
+          </ul>
+        </div>
+
+        <div style="background: #111D33; border: 1px solid rgba(96,165,250,0.12); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px; transition: all 0.25s ease;" style-hover="border-color: rgba(96,165,250,0.45); transform: translateY(-4px); box-shadow: 0 14px 38px rgba(59,130,246,0.15);">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59,130,246,0.12); border: 1px solid rgba(96,165,250,0.25); display: flex; align-items: center; justify-content: center;">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="8" width="12" height="8" rx="2" stroke="#60A5FA" stroke-width="1.6"></rect><circle cx="7" cy="17" r="2" fill="#3B82F6"></circle><circle cx="13" cy="17" r="2" fill="#3B82F6"></circle><line x1="15" y1="11" x2="19" y2="11" stroke="#60A5FA" stroke-width="1.6"></line></svg>
+          </div>
+          <div>
+            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; margin: 0 0 4px;">AI Drive-Thru</h3>
+            <p style="font-size: 13px; font-weight: 600; color: #60A5FA; margin: 0;">Avtomobildən düşmədən, AI ilə sifariş</p>
+          </div>
+          <p style="font-size: 15px; line-height: 1.65; color: #94A3B8; margin: 0;">Səsli süni intellekt sifarişi anında qəbul edir, ödənişi avtomatlaşdırır və növbələri qısaldır. Daha çox müştəri, daha az gözləmə.</p>
+          <ul style="list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px; color: #E2E8F0;">
+            <li style="display: flex; align-items: center; gap: 10px;"><span style="color: #60A5FA; font-weight: 700;">✓</span> Səsli sifariş qəbulu</li>
+            <li style="display: flex; align-items: center; gap: 10px;"><span style="color: #60A5FA; font-weight: 700;">✓</span> Upsell və avtomatik ödəniş</li>
+            <li style="display: flex; align-items: center; gap: 10px;"><span style="color: #60A5FA; font-weight: 700;">✓</span> Qısa növbə, sürətli xidmət</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NİYƏ SALIMOFF ============ -->
+  <section id="niye-biz" data-screen-label="Niyə Biz" style="padding: 90px 24px; border-top: 1px solid rgba(96,165,250,0.08); background: rgba(17,29,51,0.35);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; max-width: 640px; margin: 0 auto 56px; display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #60A5FA;">Niyə Salimoff</span>
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin: 0; line-height: 1.15;">Bizi fərqləndirən üstünlüklər</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        <sc-for list="{{ advantages }}" as="adv" hint-placeholder-count="6">
+          <div style="background: #111D33; border: 1px solid rgba(96,165,250,0.12); border-radius: 14px; padding: 26px; display: flex; flex-direction: column; gap: 12px; transition: all 0.25s ease;" style-hover="border-color: rgba(96,165,250,0.4); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(59,130,246,0.12);">
+            <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(59,130,246,0.12); border: 1px solid rgba(96,165,250,0.25); display: flex; align-items: center; justify-content: center;">
+              <div style="width: 12px; height: 12px; background: linear-gradient(135deg, #3B82F6, #60A5FA); transform: rotate(45deg); border-radius: 2px;"></div>
+            </div>
+            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; margin: 0;">{{ adv.title }}</h3>
+            <p style="font-size: 14px; line-height: 1.6; color: #94A3B8; margin: 0;">{{ adv.desc }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KOMANDA ============ -->
+  <section id="komanda" data-screen-label="Komanda" style="padding: 90px 24px; border-top: 1px solid rgba(96,165,250,0.08);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; max-width: 640px; margin: 0 auto 56px; display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #60A5FA;">Komanda</span>
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin: 0; line-height: 1.15;">Sizinlə işləyən insanlar</h2>
+      </div>
+
+      <div style="display: flex; justify-content: center; margin-bottom: 40px;">
+        <div style="background: #111D33; border: 1px solid rgba(96,165,250,0.2); border-radius: 18px; padding: 36px; width: 100%; max-width: 380px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; transition: all 0.25s ease;" style-hover="border-color: rgba(96,165,250,0.5); transform: translateY(-4px); box-shadow: 0 14px 38px rgba(59,130,246,0.18);">
+          <div style="width: 128px; height: 128px; border-radius: 50%; background: repeating-linear-gradient(45deg, #16233D, #16233D 8px, #1A2947 8px, #1A2947 16px); border: 2px solid rgba(96,165,250,0.3); display: flex; align-items: center; justify-content: center; font-family: monospace; font-size: 11px; color: #94A3B8;">foto</div>
+          <div>
+            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; margin: 0 0 6px;">Amir Salimov</h3>
+            <p style="font-size: 14px; font-weight: 600; color: #60A5FA; margin: 0;">CEO / Founder</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; max-width: 980px; margin: 0 auto;">
+        <sc-for list="{{ team }}" as="member" hint-placeholder-count="6">
+          <div style="background: #111D33; border: 1px solid rgba(96,165,250,0.12); border-radius: 14px; padding: 24px 18px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; transition: all 0.25s ease;" style-hover="border-color: rgba(96,165,250,0.4); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(59,130,246,0.12);">
+            <div style="width: 84px; height: 84px; border-radius: 50%; background: repeating-linear-gradient(45deg, #16233D, #16233D 8px, #1A2947 8px, #1A2947 16px); border: 1.5px solid rgba(96,165,250,0.25); display: flex; align-items: center; justify-content: center; font-family: monospace; font-size: 10px; color: #94A3B8;">foto</div>
+            <div>
+              <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; margin: 0 0 4px;">{{ member }}</h3>
+              <p style="font-size: 12.5px; color: #94A3B8; margin: 0;">Müştəri meneceri</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" data-screen-label="FAQ" style="padding: 90px 24px; border-top: 1px solid rgba(96,165,250,0.08); background: rgba(17,29,51,0.35);">
+    <div style="max-width: 780px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 48px; display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #60A5FA;">FAQ</span>
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin: 0; line-height: 1.15;">Tez-tez verilən suallar</h2>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <sc-for list="{{ faqs }}" as="faq" hint-placeholder-count="6">
+          <details style="background: #111D33; border: 1px solid rgba(96,165,250,0.12); border-radius: 12px; overflow: hidden;">
+            <summary style="cursor: pointer; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 600; color: #E2E8F0;">
+              {{ faq.q }}
+              <span class="faq-chev" style="color: #60A5FA; font-size: 20px; font-weight: 400; transition: transform 0.2s ease; flex-shrink: 0;">+</span>
+            </summary>
+            <p style="padding: 0 24px 20px; margin: 0; font-size: 15px; line-height: 1.65; color: #94A3B8;">{{ faq.a }}</p>
+          </details>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ƏLAQƏ + FOOTER ============ -->
+  <section id="elaqe" data-screen-label="Əlaqə" style="padding: 90px 24px 60px; border-top: 1px solid rgba(96,165,250,0.08); position: relative; overflow: hidden;">
+    <div style="position: absolute; bottom: -220px; left: 50%; transform: translateX(-50%); width: 800px; height: 420px; background: radial-gradient(ellipse at center, rgba(59,130,246,0.16), transparent 65%); pointer-events: none;"></div>
+    <div style="position: relative; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px; align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #60A5FA;">Əlaqə</span>
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4vw, 42px); font-weight: 700; margin: 0; line-height: 1.15;">Biznesiniz üçün uyğun həlli birlikdə tapaq.</h2>
+        <p style="font-size: 16px; line-height: 1.65; color: #94A3B8; margin: 0; max-width: 480px;">Demo təqdimatı üçün bizimlə əlaqə saxlayın — komandamız 24 saat ərzində sizinlə əlaqə quracaq.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; align-items: center; gap: 14px; background: #111D33; border: 1px solid rgba(96,165,250,0.12); border-radius: 12px; padding: 18px 22px;">
+          <span style="font-size: 13px; font-weight: 600; color: #60A5FA; min-width: 68px;">E-poçt</span>
+          <a href="mailto:info@salimoff.tech" style="color: #E2E8F0; font-size: 15px;" style-hover="color: #60A5FA;">info@salimoff.tech</a>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px; background: #111D33; border: 1px solid rgba(96,165,250,0.12); border-radius: 12px; padding: 18px 22px;">
+          <span style="font-size: 13px; font-weight: 600; color: #60A5FA; min-width: 68px;">Telefon</span>
+          <a href="tel:+994501234567" style="color: #E2E8F0; font-size: 15px;" style-hover="color: #60A5FA;">+994 50 123 45 67</a>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px; background: #111D33; border: 1px solid rgba(96,165,250,0.12); border-radius: 12px; padding: 18px 22px;">
+          <span style="font-size: 13px; font-weight: 600; color: #60A5FA; min-width: 68px;">Ünvan</span>
+          <span style="color: #E2E8F0; font-size: 15px;">Ağ Şəhər, 2-ci Yaşıl Ada küçəsi 7, Bakı</span>
+        </div>
+        <a href="https://wa.me/994501234567" style="display: flex; align-items: center; justify-content: center; gap: 10px; background: #22C55E; color: #FFFFFF; font-weight: 600; font-size: 16px; padding: 16px 24px; border-radius: 12px; margin-top: 6px; box-shadow: 0 4px 20px rgba(34,197,94,0.3);" style-hover="box-shadow: 0 6px 28px rgba(34,197,94,0.5); color: #FFFFFF;">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#FFFFFF" stroke-width="1.6"></circle><circle cx="10" cy="10" r="3" fill="#FFFFFF"></circle></svg>
+          WhatsApp ilə yazın
+        </a>
+      </div>
+    </div>
+
+    <footer style="position: relative; max-width: 1200px; margin: 72px auto 0; padding-top: 32px; border-top: 1px solid rgba(96,165,250,0.1); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <svg width="22" height="22" viewBox="0 0 30 30" fill="none">
+          <rect x="7" y="7" width="16" height="16" rx="3" stroke="#60A5FA" stroke-width="1.6"></rect>
+          <circle cx="15" cy="15" r="3" fill="#3B82F6"></circle>
+          <line x1="15" y1="0" x2="15" y2="7" stroke="#3B82F6" stroke-width="1.6"></line>
+          <line x1="15" y1="23" x2="15" y2="30" stroke="#3B82F6" stroke-width="1.6"></line>
+          <line x1="0" y1="15" x2="7" y2="15" stroke="#3B82F6" stroke-width="1.6"></line>
+          <line x1="23" y1="15" x2="30" y2="15" stroke="#3B82F6" stroke-width="1.6"></line>
+        </svg>
+        <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 14px;">SALIMOFF<span style="color: #60A5FA;">&nbsp;TECH</span></span>
+      </div>
+      <div style="display: flex; gap: 22px; font-size: 13px; flex-wrap: wrap;">
+        <a href="#haqqimizda">Haqqımızda</a>
+        <a href="#mehsullar">Məhsullar</a>
+        <a href="#komanda">Komanda</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <p style="font-size: 13px; color: #94A3B8; margin: 0;">© 2026 Salimoff Technology MMC. Bütün hüquqlar qorunur.</p>
+    </footer>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showCircuit&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Dekor&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showCircuit: this.props.showCircuit ?? true,
+      advantages: [
+        { title: "Yerli texnologiya", desc: "Azərbaycanda hazırlanmış, yerli bazarın ehtiyaclarına uyğunlaşdırılmış həllər." },
+        { title: "Bulud sistemi", desc: "Server xərci yoxdur — bütün sistem etibarlı bulud infrastrukturunda işləyir." },
+        { title: "API inteqrasiyası", desc: "Mövcud POS, CRM və digər sistemlərinizlə problemsiz inteqrasiya." },
+        { title: "Mobil uyğunluq", desc: "Bütün həllərimiz telefon, tablet və kompüterdə eyni keyfiyyətlə işləyir." },
+        { title: "Çoxdilli dəstək", desc: "Azərbaycan, ingilis, rus və türk dillərində müştəri təcrübəsi." },
+        { title: "24/7 texniki dəstək", desc: "Komandamız günün istənilən saatında suallarınıza cavab verməyə hazırdır." }
+      ],
+      team: ["Səhər Vəlizadə", "Təranə Əliyeva", "Sona Bağırlı", "Qumral Həsənova", "Mina Səlimova", "Südayə Məmmədova"],
+      faqs: [
+        { q: "Quraşdırma nə qədər vaxt aparır?", a: "Standart quraşdırma 1–2 həftə ərzində tamamlanır. Menyu və xidmətlərin sistemə yüklənməsi, komandanızın təlimi və test mərhələsi bu müddətə daxildir." },
+        { q: "Mövcud POS sistemimlə inteqrasiya mümkündürmü?", a: "Bəli. Həllərimiz bazarda geniş yayılmış POS sistemləri ilə hazır inteqrasiyaya malikdir. Fərqli sistem istifadə edirsinizsə, API vasitəsilə fərdi inteqrasiya qururuq." },
+        { q: "Sistem hansı dilləri dəstəkləyir?", a: "Azərbaycan, ingilis, rus və türk dilləri standart olaraq dəstəklənir. Əlavə dillər sorğu əsasında qoşula bilər." },
+        { q: "Qiymətləndirmə necə formalaşır?", a: "Qiymət biznesinizin ölçüsündən, seçilən modullardan və istifadəçi sayından asılıdır. Öhdəliksiz ilkin görüşdə sizə fərdi təklif hazırlayırıq." },
+        { q: "Texniki dəstək necə təşkil olunub?", a: "24/7 texniki dəstək bütün paketlərə daxildir. Suallarınıza telefon, WhatsApp və e-poçt vasitəsilə cavab veririk; kritik hallar üçün prioritet xətt mövcuddur." },
+        { q: "Almadan öncə demo görmək mümkündürmü?", a: "Əlbəttə. Ofisinizdə və ya onlayn formatda pulsuz demo təqdimatı keçiririk — məhsulu real ssenarilər üzərində sınaqdan keçirə bilərsiniz." }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

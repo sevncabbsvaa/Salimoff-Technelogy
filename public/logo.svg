@@ -1,0 +1,38 @@
+<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGrad" x1="100" y1="20" x2="100" y2="185" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#60A5FA"/>
+      <stop offset="0.5" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="silverGrad" x1="0" y1="60" x2="0" y2="185" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#CBD5E1"/>
+      <stop offset="1" stop-color="#94A3B8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sol budaq (silver) -->
+  <g stroke="url(#silverGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path class="branch branch-left" d="M66 168 V120 L57 108 V98"/>
+    <circle class="node node-left" cx="57" cy="86" r="9" stroke-width="6.5"/>
+  </g>
+
+  <!-- Sağ budaq (silver) -->
+  <g stroke="url(#silverGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path class="branch branch-right" d="M134 168 V126 L143 114 V92"/>
+    <circle class="node node-right" cx="143" cy="80" r="9" stroke-width="6.5"/>
+  </g>
+
+  <!-- Mərkəz xətt (blue gradient) -->
+  <g stroke="url(#blueGrad)" stroke-linecap="round">
+    <path class="stem" d="M100 168 V58" stroke-width="10"/>
+    <circle class="node node-top" cx="100" cy="42" r="12" stroke-width="8"/>
+  </g>
+
+  <!-- Baza xətləri -->
+  <g stroke-linecap="round">
+    <path class="base base-upper-l" d="M44 168 H88" stroke="url(#silverGrad)" stroke-width="7"/>
+    <path class="base base-upper-r" d="M112 168 H156" stroke="url(#silverGrad)" stroke-width="7"/>
+    <path class="base base-lower" d="M64 183 H136" stroke="url(#blueGrad)" stroke-width="7"/>
+  </g>
+</svg>
