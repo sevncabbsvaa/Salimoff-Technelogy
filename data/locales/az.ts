@@ -120,17 +120,14 @@ export const az: SiteContent = {
   team: {
     title: "Komandamız",
     ceo: {
-      name: "Amir Salimov", // ⚠️ Tam soyadı CEO ilə dəqiqləşdir
+      name: "Amir Salimov", 
       role: "CEO / Founder",
       photo: "/team/amir.jpg",
     },
     members: [
-      { name: "Səhər Vəlizadə", role: "Müştəri meneceri", photo: "/team/seher.jpg" },
-      { name: "Təranə Əliyeva", role: "Müştəri meneceri", photo: "/team/terane.jpg" },
-      { name: "Sona Bağırlı", role: "Müştəri meneceri", photo: "/team/sona.jpg" },
-      { name: "Qumral Həsənova", role: "Müştəri meneceri", photo: "/team/qumral.jpg" },
-      { name: "Mina Səlimova", role: "Müştəri meneceri", photo: "/team/mina.jpg" },
-      { name: "Südayə Məmmədova", role: "Müştəri meneceri", photo: "/team/sudaye.jpg" },
+      { name: "Sevinc Abbasova", role: "Software Developer", photo: "/team/sevinc.jpg" },
+      { name: "Şamil Cəfərli", role: "AI Engineer", photo: "/team/shamil.jpg" },
+      
     ],
   },
   faq: {

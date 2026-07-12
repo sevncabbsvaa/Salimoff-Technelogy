@@ -120,17 +120,13 @@ export const en: SiteContent = {
   team: {
     title: "Our Team",
     ceo: {
-      name: "Amir Salimov", // ⚠️ confirm full surname with CEO
+      name: "Amir Salimov", 
       role: "CEO / Founder",
       photo: "/team/amir.jpg",
     },
     members: [
-      { name: "Sahar Valizada", role: "Client Manager", photo: "/team/seher.jpg" },
-      { name: "Tarana Aliyeva", role: "Client Manager", photo: "/team/terane.jpg" },
-      { name: "Sona Bagirli", role: "Client Manager", photo: "/team/sona.jpg" },
-      { name: "Gumral Hasanova", role: "Client Manager", photo: "/team/qumral.jpg" },
-      { name: "Mina Salimova", role: "Client Manager", photo: "/team/mina.jpg" },
-      { name: "Sudaya Mammadova", role: "Client Manager", photo: "/team/sudaye.jpg" },
+      { name: "Sevinc Abbasova", role: "Software Developer", photo: "/team/sevinc.jpg" },
+      { name: "Shamil Jafarli", role: "AI Engineer", photo: "/team/shamil.jpg" },
     ],
   },
   faq: {

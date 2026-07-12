@@ -120,17 +120,13 @@ export const ru: SiteContent = {
   team: {
     title: "Наша команда",
     ceo: {
-      name: "Амир Салимов", // ⚠️ уточнить полную фамилию у CEO
+      name: "Амир Салимов", 
       role: "CEO / Основатель",
       photo: "/team/amir.jpg",
     },
     members: [
-      { name: "Сахар Велизаде", role: "Клиентский менеджер", photo: "/team/seher.jpg" },
-      { name: "Тарана Алиева", role: "Клиентский менеджер", photo: "/team/terane.jpg" },
-      { name: "Сона Багирлы", role: "Клиентский менеджер", photo: "/team/sona.jpg" },
-      { name: "Гумрал Гасанова", role: "Клиентский менеджер", photo: "/team/qumral.jpg" },
-      { name: "Мина Салимова", role: "Клиентский менеджер", photo: "/team/mina.jpg" },
-      { name: "Судая Мамедова", role: "Клиентский менеджер", photo: "/team/sudaye.jpg" },
+      { name: "Севиндж Аббасова", role: "Software Developer", photo: "/team/sevinc.jpg" },
+      { name: "Шамиль Джафарлы", role: "AI Engineer", photo: "/team/shamil.jpg" },
     ],
   },
   faq: {
