@@ -8,7 +8,7 @@ export default function Faq({ content }: { content: SiteContent }) {
   return (
     <>
       <DiagonalWedge position="in" angle="left" />
-      <section id="faq" className="px-6 pt-[70px] pb-[90px] bg-bg-tint">
+      <section id="faq" className="scroll-mt-21 px-6 pt-[70px] pb-[90px] bg-bg-tint">
         <div className="max-w-195 mx-auto">
           <div className="mb-12">
             <SectionHeading eyebrow={eyebrow} heading={content.faq.title} />

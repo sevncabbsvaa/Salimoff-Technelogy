@@ -28,7 +28,7 @@ export default function TeamPhoto({ src, alt, size }: { src: string; alt: string
         alt={alt}
         fill
         sizes={`${size}px`}
-        className="object-cover grayscale transition-all duration-300 group-hover:grayscale-0"
+        className="object-cover"
         onError={() => setFailed(true)}
       />
     </div>

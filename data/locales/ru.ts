@@ -47,6 +47,7 @@ export const ru: SiteContent = {
     items: [
       {
         id: "ai-ofisant",
+        logo: "/products/ai-ofisant-mark.png",
         name: "AI Ofisant",
         tagline: "Новый сотрудник вашего ресторана",
         description:
@@ -61,6 +62,7 @@ export const ru: SiteContent = {
       },
       {
         id: "ai-room-service",
+        logo: "/products/ai-room-service-mark.png",
         name: "AI Room Service",
         tagline: "AI-ассистент для отелей",
         description:
@@ -74,6 +76,7 @@ export const ru: SiteContent = {
       },
       {
         id: "ai-smart-residence",
+        logo: "/products/ai-smart-residence-mark.png",
         name: "AI Smart Residence",
         tagline: "Ваш дом работает на вас",
         description:
@@ -88,6 +91,7 @@ export const ru: SiteContent = {
       },
       {
         id: "ai-drive-thru",
+        logo: "/products/ai-drive-thru-mark.png",
         name: "AI Drive-Thru",
         tagline: "Голосовой заказ, не выходя из машины",
         description:
@@ -167,7 +171,8 @@ export const ru: SiteContent = {
     phone: "+994 70 805 22 20", // ⚠️ уточнить у CEO
     addressLabel: "Адрес",
     address: "Белый город (Ağ Şəhər), ул. 2-я Яшыл Ада 7, Баку",
-    whatsapp: "https://wa.me/994708052220",
+    whatsapp:
+      "https://wa.me/994708052220?text=Salam%2C%20m%C9%99hsullar%C4%B1n%C4%B1z%20haqq%C4%B1nda%20m%C9%99lumat%20almaq%20ist%C9%99yir%C9%99m",
     whatsappCta: "Написать в WhatsApp",
   },
   footer: {

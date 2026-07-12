@@ -2,7 +2,7 @@ import type { SiteContent } from "@/data/types";
 
 export default function Hero({ content }: { content: SiteContent }) {
   return (
-    <header id="hero" className="relative px-6 pt-[90px] pb-[100px] overflow-hidden">
+    <header id="hero" className="relative scroll-mt-21 px-6 pt-[90px] pb-[100px] overflow-hidden">
       {/* giant logo watermark */}
       <svg
         className="absolute -right-35 top-1/2 -translate-y-1/2 w-[680px] h-[680px] opacity-5 pointer-events-none"

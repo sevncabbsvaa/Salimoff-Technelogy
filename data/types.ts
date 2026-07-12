@@ -35,6 +35,7 @@ export interface SiteContent {
       tagline: string;
       description: string;
       features: string[];
+      logo: string;
     }[];
   };
   whyUs: {

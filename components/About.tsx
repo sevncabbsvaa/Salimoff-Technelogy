@@ -12,7 +12,7 @@ function InfoCard({ title, text }: { title: string; text: string }) {
 export default function About({ content }: { content: SiteContent }) {
   const { about } = content;
   return (
-    <section id="haqqimizda" className="px-6 py-[90px]">
+    <section id="haqqimizda" className="scroll-mt-21 px-6 py-[90px]">
       <div className="max-w-[1200px] mx-auto grid [grid-template-columns:repeat(auto-fit,minmax(320px,1fr))] gap-12 items-center">
         <div className="flex flex-col gap-4.5">
           <h2 className="font-heading text-[clamp(28px,4vw,40px)] font-bold m-0 leading-[1.15]">{about.title}</h2>

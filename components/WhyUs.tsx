@@ -8,7 +8,7 @@ export default function WhyUs({ content }: { content: SiteContent }) {
   return (
     <>
       <DiagonalWedge position="in" angle="right" />
-      <section id="niye-biz" className="px-6 pt-[70px] pb-[90px] bg-bg-tint">
+      <section id="niye-biz" className="scroll-mt-21 px-6 pt-[70px] pb-[90px] bg-bg-tint">
         <div className="max-w-[1200px] mx-auto">
           <div className="mb-14">
             <SectionHeading eyebrow={eyebrow} heading={content.whyUs.title} />

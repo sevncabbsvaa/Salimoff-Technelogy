@@ -38,7 +38,7 @@ export default function Nav({ content, locale }: { content: SiteContent; locale:
 
   return (
     <>
-    <nav className="sticky top-0 z-50 backdrop-blur-lg bg-bg/78 border-b border-accent-light/10">
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-lg bg-bg/78 border-b border-accent-light/10">
       <div className="max-w-[1200px] mx-auto px-6 h-17 flex items-center justify-between gap-4">
         <a href="#hero" className="flex items-center">
           <Logo size={32} />

@@ -4,7 +4,7 @@ export default function Contact({ content }: { content: SiteContent }) {
   const { contact } = content;
 
   return (
-    <section id="elaqe" className="relative overflow-hidden px-6 pt-7.5 pb-15">
+    <section id="elaqe" className="relative scroll-mt-21 overflow-hidden px-6 pt-7.5 pb-15">
       <div className="absolute -bottom-55 left-1/2 -translate-x-1/2 w-200 h-105 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.16),transparent_65%)] pointer-events-none" />
       <div className="relative max-w-[1200px] mx-auto grid [grid-template-columns:repeat(auto-fit,minmax(320px,1fr))] gap-12 items-start">
         <div className="flex flex-col gap-5">

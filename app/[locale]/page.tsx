@@ -17,7 +17,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const content = getContent(locale);
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-bg">
+    <div className="min-h-screen overflow-x-hidden bg-bg pt-17">
       <Nav content={content} locale={locale} />
       <main>
         <Hero content={content} />

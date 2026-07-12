@@ -47,6 +47,7 @@ export const en: SiteContent = {
     items: [
       {
         id: "ai-ofisant",
+        logo: "/products/ai-ofisant-mark.png",
         name: "AI Ofisant",
         tagline: "Your restaurant's newest team member",
         description:
@@ -61,6 +62,7 @@ export const en: SiteContent = {
       },
       {
         id: "ai-room-service",
+        logo: "/products/ai-room-service-mark.png",
         name: "AI Room Service",
         tagline: "An AI assistant for hotels",
         description:
@@ -74,6 +76,7 @@ export const en: SiteContent = {
       },
       {
         id: "ai-smart-residence",
+        logo: "/products/ai-smart-residence-mark.png",
         name: "AI Smart Residence",
         tagline: "Your building, working for you",
         description:
@@ -88,6 +91,7 @@ export const en: SiteContent = {
       },
       {
         id: "ai-drive-thru",
+        logo: "/products/ai-drive-thru-mark.png",
         name: "AI Drive-Thru",
         tagline: "Order by voice, without leaving your car",
         description:
@@ -167,7 +171,8 @@ export const en: SiteContent = {
     phone: "+994 70 805 22 20", // ⚠️ confirm with CEO
     addressLabel: "Address",
     address: "White City, 2nd Yashil Ada street 7, Baku",
-    whatsapp: "https://wa.me/994708052220",
+    whatsapp:
+      "https://wa.me/994708052220?text=Salam%2C%20m%C9%99hsullar%C4%B1n%C4%B1z%20haqq%C4%B1nda%20m%C9%99lumat%20almaq%20ist%C9%99yir%C9%99m",
     whatsappCta: "Chat on WhatsApp",
   },
   footer: {
