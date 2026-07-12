@@ -162,7 +162,7 @@ export const en: SiteContent = {
     title: "Contact",
     subtitle: "Let's find the right solution for your business, together.",
     emailLabel: "Email",
-    email: "ceo@aiofisant.com",
+    email: "salimoffgroup@gmail.com",
     phoneLabel: "Phone",
     phone: "+994 70 805 22 20", // ⚠️ confirm with CEO
     addressLabel: "Address",

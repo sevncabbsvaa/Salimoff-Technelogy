@@ -162,9 +162,9 @@ export const ru: SiteContent = {
     title: "Контакты",
     subtitle: "Найдём подходящее решение для вашего бизнеса — вместе.",
     emailLabel: "Эл. почта",
-    email: "ceo@aiofisant.com",
+    email: "salimoffgroup@gmail.com",
     phoneLabel: "Телефон",
-    phone: "+994 70 805 22 20", // ⚠️ уточнить у CEO
+    phone: "+994 70 805 22 20", 
     addressLabel: "Адрес",
     address: "Белый город (Ağ Şəhər), ул. 2-я Яшыл Ада 7, Баку",
     whatsapp:

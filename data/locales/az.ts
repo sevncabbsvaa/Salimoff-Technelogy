@@ -163,7 +163,7 @@ export const az: SiteContent = {
     title: "Əlaqə",
     subtitle: "Biznesiniz üçün uyğun həlli birlikdə tapaq.",
     emailLabel: "E-poçt",
-    email: "ceo@aiofisant.com",
+    email: "salimoffgroup@gmail.com",
     phoneLabel: "Telefon",
     phone: "+994 70 805 22 20", // ⚠️ CEO ilə təsdiqlə
     addressLabel: "Ünvan",
