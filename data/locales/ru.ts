@@ -28,6 +28,17 @@ export const ru: SiteContent = {
     ctaPrimary: "Связаться",
     ctaSecondary: "Смотреть продукты",
   },
+  partners: {
+    title: "Нам доверяют",
+    sectionTitle: "Наши партнёры",
+    items: [
+      { name: "AR Menu", logo: "/partners/partner-armenu.png" },
+      { name: "Bukhari", logo: "/partners/partner-bukhari.png" },
+      { name: "Galiano Lounge", logo: "/partners/partner-galiano.png" },
+      { name: "Mühür Ocaq Başı", logo: "/partners/partner-muhur.png" },
+      { name: "Rubin Resto & Pub", logo: "/partners/partner-rubin.png" },
+    ],
+  },
   about: {
     title: "О нас",
     text: "Salimoff Technology — технологическая компания, разрабатывающая программные решения на базе искусственного интеллекта для различных отраслей. Наша цель — автоматизировать процессы в ресторанах, отелях, жилых комплексах и сфере услуг, повышая качество сервиса и доходы бизнеса.",
@@ -58,6 +69,7 @@ export const ru: SiteContent = {
           "Умные upsell-предложения",
           "Интеграция с POS",
           "Работа 24/7 без перерывов",
+          "Меню отчётов"
         ],
       },
       {

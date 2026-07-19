@@ -28,6 +28,17 @@ export const az: SiteContent = {
     ctaPrimary: "Əlaqə saxla",
     ctaSecondary: "Məhsullara bax",
   },
+  partners: {
+    title: "Bizə etibar edənlər",
+    sectionTitle: "Partnyorlarımız",
+    items: [
+      { name: "AR Menu", logo: "/partners/partner-armenu.png" },
+      { name: "Bukhari", logo: "/partners/partner-bukhari.png" },
+      { name: "Galiano Lounge", logo: "/partners/partner-galiano.png" },
+      { name: "Mühür Ocaq Başı", logo: "/partners/partner-muhur.png" },
+      { name: "Rubin Resto & Pub", logo: "/partners/partner-rubin.png" },
+    ],
+  },
   about: {
     title: "Haqqımızda",
     text: "Salimoff Technology müxtəlif sahələr üçün süni intellekt əsaslı proqram təminatları hazırlayan texnologiya şirkətidir. Məqsədimiz restoran, otel, yaşayış kompleksi və xidmət sektorunda əməliyyatları avtomatlaşdırmaq, xidmət keyfiyyətini yüksəltmək və bizneslərin gəlirlərini artırmaqdır.",
@@ -58,6 +69,7 @@ export const az: SiteContent = {
           "Ağıllı upsell təklifləri",
           "POS inteqrasiyası",
           "24/7 fasiləsiz xidmət",
+          "Hesabat verən menyu"
         ],
       },
       {

@@ -28,6 +28,17 @@ export const en: SiteContent = {
     ctaPrimary: "Contact Us",
     ctaSecondary: "View Products",
   },
+  partners: {
+    title: "Trusted by",
+    sectionTitle: "Our Partners",
+    items: [
+      { name: "AR Menu", logo: "/partners/partner-armenu.png" },
+      { name: "Bukhari", logo: "/partners/partner-bukhari.png" },
+      { name: "Galiano Lounge", logo: "/partners/partner-galiano.png" },
+      { name: "Mühür Ocaq Başı", logo: "/partners/partner-muhur.png" },
+      { name: "Rubin Resto & Pub", logo: "/partners/partner-rubin.png" },
+    ],
+  },
   about: {
     title: "About Us",
     text: "Salimoff Technology is a technology company building AI-powered software solutions for a wide range of industries. Our goal is to automate operations across restaurants, hotels, residential complexes, and the service sector — improving service quality and increasing business revenue.",
@@ -58,6 +69,7 @@ export const en: SiteContent = {
           "Smart upsell suggestions",
           "POS integration",
           "24/7 uninterrupted service",
+          "Reports Menu"
         ],
       },
       {

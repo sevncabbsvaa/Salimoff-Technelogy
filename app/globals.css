@@ -39,6 +39,39 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 
+@keyframes partners-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.partners-marquee-viewport {
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+.partners-marquee-track {
+  animation: partners-marquee 35s linear infinite;
+}
+
+.partners-marquee-viewport:hover .partners-marquee-track {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -50,5 +83,15 @@ details > summary::-webkit-details-marker {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .partners-marquee-viewport {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .partners-marquee-track {
+    animation: none;
+    transform: none;
   }
 }

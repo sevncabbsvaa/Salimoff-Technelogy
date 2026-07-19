@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Products from "@/components/Products";
 import WhyUs from "@/components/WhyUs";
+import Partners from "@/components/Partners";
 import Team from "@/components/Team";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
@@ -26,6 +27,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <Divider />
         <Products content={content} />
         <WhyUs content={content} />
+        <Partners content={content} />
         <Team content={content} />
         <Faq content={content} />
         <Contact content={content} />

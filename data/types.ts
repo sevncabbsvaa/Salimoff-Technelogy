@@ -20,6 +20,11 @@ export interface SiteContent {
     ctaPrimary: string;
     ctaSecondary: string;
   };
+  partners: {
+    title: string;
+    sectionTitle: string;
+    items: { name: string; logo: string }[];
+  };
   about: {
     title: string;
     text: string;
